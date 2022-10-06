@@ -1,2 +1,2 @@
-# DataVizURL
+# DataViz
  cooperative project
