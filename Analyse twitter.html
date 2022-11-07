@@ -31,15 +31,15 @@
       <p>Étude de cas menée sur l’utilisation générale des <br> réseaux sociaux </p>
       <nav>
         <ul class="list-sidenav">
-          <hr width="300px align="left">
+          <hr width="300px align=" left">
           <li><a href="Analyse facebook.html" class="white">Facebook</a></li>
           <li><a href="Analyse instagram.html" class="white">Instagram</a></li>
           <li><a href="Analyse snapchat.html" class="white">Snapchat</a></li>
           <li><a href="Analyse twitter.html" class="blue">Twitter</a></li>
-          <hr width="300px align="left">
+          <hr width="300px align=" left">
         </ul>
       </nav>
-      
+
     </header>
     <!-- Fin du HEADER -->
 
@@ -47,7 +47,8 @@
       <div class="rectangle1"></div>
       <h1>ANALYSES TWITTER</h1>
       <!-- <p>Données de 2012 à 2022 avec % des plateformes les plus utilisées dans le monde </p> -->
-      <canvas id="Chart2twitterline" style="position: relative; height:40vh; width:80vw; margin-top: 30px; margin-left: 20px; margin-right: 20px;">
+      <canvas id="Chart2twitterline"
+        style="position: relative; height:40vh; width:80vw; margin-top: 30px; margin-left: 20px; margin-right: 20px;">
       </canvas>
       <canvas id="BarChart1Twitter" style="position: relative; height:40vh; width:80vw; margin: 10px">
       </canvas>
@@ -68,7 +69,10 @@
         <p> <strong> 2021 </strong> <br> <strong> 436 </strong> millions</p>
       </div>
       <h2>Taux d'évolution d'une année à l'autre</h2>
-      <div class="augmentation"> <h3>+ 32%</h3> <i class="fa-solid fa-arrow-trend-up" style="font-size: 60px; color: #85d3ff; display: flex ; align-items: center; text-align: center;"></i></div>
+      <div class="augmentation">
+        <h3>+ 32%</h3> <i class="fa-solid fa-arrow-trend-up"
+          style="font-size: 60px; color: #85d3ff; display: flex ; align-items: center; text-align: center;"></i>
+      </div>
 
       <div class="doughnut">
         <canvas id="doughnuttwitter" style="position: relative; height:100%; width:100%">
@@ -84,15 +88,32 @@
   </div>
 
   <script>
-    const Chart2 = document.getElementById('Chart2twitterline').getContext('2d');
-    const PossChart2twitterline = new Chart(Chart2, {
+    new Chart(document.getElementById("Chart2twitterline").getContext('2d'), {
       type: 'line',
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          title: {
+            display: true,
+            text: 'Évolution du nombre d’utilisateurs mensuels actifs dans le monde au cours des années'
+          }
+        }, scales: {
+          x: {
+            title: {
+              display: true,
+              text: 'millions'
+            }
+          }
+
+        }
+      },
       data: {
         labels: ["2012", "2013", "2014", "2015", "2016", "2018", "2019", "2021"],
 
         datasets: [{
-          label: 'Twitter : pourcentage de personnes dans le monde qui utilisent le réseau social',
-          data: [14, 16, 19, 20, 21, 24, 22, 23],
+          label: 'Nombre d’utilisateurs mensuels',
+          data: [50000000, 250000000, 240000000, 300000000, 295000000, 310000000, 310000000, 326000000],
           fill: false,
           borderColor: 'rgb(3, 169, 244)',
           backgroundColor: 'rgb(3, 169, 244)',
@@ -101,16 +122,50 @@
       }
     });
 
+
+    new Chart(document.getElementById("Chart3snapline").getContext('2d'), {
+      type: 'line',
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          title: {
+            display: true,
+            text: 'Évolution du nombre d’utilisateurs mensuels actifs dans le monde au cours des années'
+          }
+        }, scales: {
+          x: {
+            title: {
+              display: true
+            }
+          }
+
+        }
+      },
+      data: {
+        labels: ["2014", "2015", "2016", "2018", "2019", "2021"],
+
+        datasets: [{
+          label: 'Nombre d’utilisateurs mensuels',
+          data: [15000000, 25000000, 100000000, 110000000, 400000000, 500000000],
+          fill: false,
+          borderColor: 'rgb(255, 242, 0)',
+          backgroundColor: 'rgb(255, 242, 0)',
+          tension: 0.1
+        }]
+      }
+    });
+
     // Graphique localisation twitter 
 
-    new Chart(document.getElementById("BarChart1Twitter"), {
+    new Chart(document.getElementById("BarChart1Twitter").getContext('2d'), {
       type: 'bar',
       data: {
         labels: ['États-Unis', 'Japon', 'Inde', 'Royaume-Uni', 'Brésil'],
         datasets: [
           {
-            label: 'Twitter: 2021 Top 5 des pays qui utilisent le plus le réseau social',
-            data: [69.3, 50.9, 17.5, 16.45, 16.2],
+            label: 'Top 5 des pays qui utilisent le plus le réseau social en 2021',
+            data: [69300000, 50900000, 17500000, 16450000, 16200000],
             borderColor: 'rgb(3, 169, 244)',
             backgroundColor: [
               'rgba(153, 102, 255, 0.2)',
@@ -142,7 +197,7 @@
           legend: { display: false },
           title: {
             display: true,
-            text: 'Twitter: 2021 Top 5 des pays qui utilisent le plus le réseau social'
+            text: 'Top 5 des pays qui utilisent le plus le réseau social en 2021'
           }
         }, scales: {
           x: {
@@ -164,68 +219,69 @@
       }
     });
 
+
     new Chart(document.getElementById("doughnuttwitter"), {
-            type: 'doughnut',
-            data: {
-                datasets: [{
-                    data: [
-                        70, 30, 0, 0, 0, 0
-                    ],
+      type: 'doughnut',
+      data: {
+        datasets: [{
+          data: [
+            70, 30, 0, 0, 0, 0
+          ],
 
-                    backgroundColor: [
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(201, 203, 207, 0.2)',
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(255, 159, 64, 0.2)',
-                        'rgba(255, 205, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgb(153, 102, 255)',
-                        'rgb(201, 203, 207)',
-                        'rgb(255, 99, 132)',
-                        'rgb(255, 159, 64)',
-                        'rgb(255, 205, 86)',
-                        'rgb(75, 192, 192)'
-                    ],
-                    cutout: '0%', borderRadius: 20
-                }, {
-                    data: [
-                        0, 0, 24, 38, 21, 17
+          backgroundColor: [
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(201, 203, 207, 0.2)',
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(255, 159, 64, 0.2)',
+            'rgba(255, 205, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)'
+          ],
+          borderColor: [
+            'rgb(153, 102, 255)',
+            'rgb(201, 203, 207)',
+            'rgb(255, 99, 132)',
+            'rgb(255, 159, 64)',
+            'rgb(255, 205, 86)',
+            'rgb(75, 192, 192)'
+          ],
+          cutout: '0%', borderRadius: 20
+        }, {
+          data: [
+            0, 0, 24, 38, 21, 17
 
-                    ],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(255, 159, 64, 0.2)',
-                        'rgba(255, 205, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgb(255, 99, 132)',
-                        'rgb(255, 159, 64)',
-                        'rgb(255, 205, 86)',
-                        'rgb(75, 192, 192)'
-                    ], cutout: '0%', borderRadius: 20
-                }],
-                labels: [
-                    "Homme",
-                    "Femme",
-                    "-25 ans",
-                    "25-34 ans",
-                    "35-54 ans",
-                    "55 ans et +"
-                ]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 'Twitter : Profil utilisateurs type'
-                    }
-                }
-            }
-        });
+          ],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(255, 159, 64, 0.2)',
+            'rgba(255, 205, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)'
+          ],
+          borderColor: [
+            'rgb(255, 99, 132)',
+            'rgb(255, 159, 64)',
+            'rgb(255, 205, 86)',
+            'rgb(75, 192, 192)'
+          ], cutout: '0%', borderRadius: 20
+        }],
+        labels: [
+          "Homme",
+          "Femme",
+          "-25 ans",
+          "25-34 ans",
+          "35-54 ans",
+          "55 ans et +"
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: 'Twitter : Profil utilisateurs type'
+          }
+        }
+      }
+    });
   </script>
 
 </body>

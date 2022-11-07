@@ -2,87 +2,93 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="chart.min.js"></script>
-  <title>Analyses Instagram</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="chart.min.js"></script>
+    <title>Analyses Instagram</title>
 
-  <!-- Lien vers les autres pages -->
-  <link rel="stylesheet" href="css/analyse twitter.css">
-  <link rel="shortcut icon" type="image/png" href="img/oeil.png" />
-  <!-- Fin des autres pages -->
+    <!-- Lien vers les autres pages -->
+    <link rel="stylesheet" href="css/analyse twitter.css">
+    <link rel="shortcut icon" type="image/png" href="img/oeil.png" />
+    <!-- Fin des autres pages -->
 
-  <!-- Les fonts et icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <!-- Fin des fonts -->
+    <!-- Les fonts et icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- Fin des fonts -->
 </head>
 
 <body>
-  <div class="container-grille">
+    <div class="container-grille">
 
-    <!-- HEADER -->
-    <header id="sidebar">
-      <a href="index.html"><img src="img/oeil.png" alt=""></a>
-      <a href="index.html">
-        <h1>DATAVIZ</h1>
-      </a>
-      <p>Étude de cas menée sur l’utilisation générale des <br> réseaux sociaux </p>
-      <nav>
-        <ul class="list-sidenav">
-          <hr width="300px align="left">
-          <li><a href="Analyse facebook.html" class="white">Facebook</a></li>
-          <li><a href="Analyse instagram.html" class="blue">Instagram</a></li>
-          <li><a href="Analyse snapchat.html" class="white">Snapchat</a></li>
-          <li><a href="Analyse twitter.html" class="white">Twitter</a></li>
-          <hr width="300px align="left">
-        </ul>
-      </nav>
-      
-    </header>
-    <!-- Fin du HEADER -->
+        <!-- HEADER -->
+        <header id="sidebar">
+            <a href="index.html"><img src="img/oeil.png" alt=""></a>
+            <a href="index.html">
+                <h1>DATAVIZ</h1>
+            </a>
+            <p>Étude de cas menée sur l’utilisation générale des <br> réseaux sociaux </p>
+            <nav>
+                <ul class="list-sidenav">
+                    <hr width="300px align=" left">
+                    <li><a href="Analyse facebook.html" class="white">Facebook</a></li>
+                    <li><a href="Analyse instagram.html" class="blue">Instagram</a></li>
+                    <li><a href="Analyse snapchat.html" class="white">Snapchat</a></li>
+                    <li><a href="Analyse twitter.html" class="white">Twitter</a></li>
+                    <hr width="300px align=" left">
+                </ul>
+            </nav>
 
-    <section class="analyses">
-      <div class="rectangle1"></div>
-      <h1>ANALYSES INSTAGRAM</h1>
-      <!-- <p>Données de 2012 à 2022 avec % des plateformes les plus utilisées dans le monde </p> -->
-      <canvas id="Chart4instaline" style="position: relative; height:40vh; width:80vw; margin-top: 30px; margin-left: 20px; margin-right: 20px;">
-      </canvas>
-      <canvas id="BarChart1insta" style="position: relative; height:40vh; width:80vw; margin: 10px">
-      </canvas>
-      <h2>INFORMATIONS COMPLÉMENTAIRES</h2>
-      <div class="texte">
-        <p>Instagram est une application, un réseau social et un service de partage de photos et de vidéos fondés et lancés en octobre 2010 par l'Américain Kevin Systrom et le Brésilien Michel Mike Krieger. La plateforme est élue réseau social préféré des Français chez les 16-25ans.</p>
-      </div>
-    </section>
+        </header>
+        <!-- Fin du HEADER -->
 
-    <section class="aside">
-      <div class="rectangle2"></div>
-      <h2>Performance</h2>
-      <div class="explication">
-        <p> <strong> 2020 </strong> <br> <strong> 1,393 </strong> milliards</p>
-        <span class="vertical-line"></span>
-        <p> <strong> 2021 </strong> <br> <strong> 2 </strong> milliards</p>
-      </div>
-      <h2>Taux d'évolution d'une année à l'autre</h2>
-      <div class="augmentation"> <h3>+ 44%</h3> <i class="fa-solid fa-arrow-trend-up" style="font-size: 60px; color: #85d3ff; display: flex ; align-items: center; text-align: center;"></i></div>
+        <section class="analyses">
+            <div class="rectangle1"></div>
+            <h1>ANALYSES INSTAGRAM</h1>
+            <!-- <p>Données de 2012 à 2022 avec % des plateformes les plus utilisées dans le monde </p> -->
+            <canvas id="Chart4instaline"
+                style="position: relative; height:40vh; width:80vw; margin-top: 30px; margin-left: 20px; margin-right: 20px;">
+            </canvas>
+            <canvas id="BarChart1insta" style="position: relative; height:40vh; width:80vw; margin: 10px">
+            </canvas>
+            <h2>INFORMATIONS COMPLÉMENTAIRES</h2>
+            <div class="texte">
+                <p>Instagram est une application, un réseau social et un service de partage de photos et de vidéos
+                    fondés et lancés en octobre 2010 par l'Américain Kevin Systrom et le Brésilien Michel Mike Krieger.
+                    La plateforme est élue réseau social préféré des Français chez les 16-25ans.</p>
+            </div>
+        </section>
 
-      <div class="doughnut">
-        <canvas id="doughnutInsta" style="position: relative; height:100%; width:100%">
-        </canvas>
-      </div>
-    </section>
+        <section class="aside">
+            <div class="rectangle2"></div>
+            <h2>Performance</h2>
+            <div class="explication">
+                <p> <strong> 2020 </strong> <br> <strong> 1,393 </strong> milliards</p>
+                <span class="vertical-line"></span>
+                <p> <strong> 2021 </strong> <br> <strong> 2 </strong> milliards</p>
+            </div>
+            <h2>Taux d'évolution d'une année à l'autre</h2>
+            <div class="augmentation">
+                <h3>+ 44%</h3> <i class="fa-solid fa-arrow-trend-up"
+                    style="font-size: 60px; color: #85d3ff; display: flex ; align-items: center; text-align: center;"></i>
+            </div>
 
-    <footer>
-      <div class="links"><a href="mentions.html">Mention légales</a> <a href="A propos.html">A propos</a></div>
-      <p>©dataviz-2022</p>
-    </footer>
+            <div class="doughnut">
+                <canvas id="doughnutInsta" style="position: relative; height:100%; width:100%">
+                </canvas>
+            </div>
+        </section>
 
-  </div>
+        <footer>
+            <div class="links"><a href="mentions.html">Mention légales</a> <a href="A propos.html">A propos</a></div>
+            <p>©dataviz-2022</p>
+        </footer>
 
-  <script>
-    new Chart(document.getElementById("Chart4instaline").getContext('2d'), {
+    </div>
+
+    <script>
+        new Chart(document.getElementById("Chart4instaline").getContext('2d'), {
             type: 'line',
             options: {
                 responsive: true,
@@ -94,8 +100,7 @@
                     }, scales: {
                         x: {
                             title: {
-                                display: true,
-                                text: 'million - milliards'
+                                display: true
                             }
                         }
 
@@ -116,9 +121,9 @@
             }
         });
 
-    // Graphique localisation twitter 
+        // Graphique localisation twitter 
 
-    new Chart(document.getElementById("BarChart1insta").getContext('2d'), {
+        new Chart(document.getElementById("BarChart1insta").getContext('2d'), {
             type: 'bar',
             data: {
                 labels: ['États-Unis', 'Inde', 'Brésil', 'Indonésie', 'Russie'],
@@ -246,7 +251,7 @@
                 }
             }
         });
-  </script>
+    </script>
 
 </body>
 
