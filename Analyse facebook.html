@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="chart.min.js"></script>
+  <title>Analyses Facebook</title>
+
+  <!-- Lien vers les autres pages -->
+  <link rel="stylesheet" href="css/analyse twitter.css">
+  <link rel="shortcut icon" type="image/png" href="img/oeil.png" />
+  <!-- Fin des autres pages -->
+
+  <!-- Les fonts et icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <!-- Fin des fonts -->
+</head>
+
+<body>
+  <div class="container-grille">
+
+    <!-- HEADER -->
+    <header id="sidebar">
+      <a href="index.html"><img src="img/oeil.png" alt=""></a>
+      <a href="index.html">
+        <h1>DATAVIZ</h1>
+      </a>
+      <p>Étude de cas menée sur l’utilisation générale des <br> réseaux sociaux </p>
+      <nav>
+        <ul class="list-sidenav">
+          <hr width="300px align="left">
+          <li><a href="Analyse facebook.html" class="blue">Facebook</a></li>
+          <li><a href="Analyse instagram.html" class="white">Instagram</a></li>
+          <li><a href="Analyse snapchat.html" class="white">Snapchat</a></li>
+          <li><a href="Analyse twitter.html" class="white">Twitter</a></li>
+          <hr width="300px align="left">
+        </ul>
+      </nav>
+      
+    </header>
+    <!-- Fin du HEADER -->
+
+    <section class="analyses">
+      <div class="rectangle1"></div>
+      <h1>ANALYSES FACEBOOK</h1>
+      <!-- <p>Données de 2012 à 2022 avec % des plateformes les plus utilisées dans le monde </p> -->
+      <canvas id="Chart1facebookline" style="position: relative; height:40vh; width:80vw; margin-top: 30px; margin-left: 20px; margin-right: 20px;">
+      </canvas>
+      <canvas id="BarChart1Facebook" style="position: relative; height:40vh; width:80vw; margin: 10px">
+      </canvas>
+      <h2>INFORMATIONS COMPLÉMENTAIRES</h2>
+      <div class="texte">
+        <p>Facebook est un réseau social fondé en 2004 par l’américain Mark Zuckerberg et appartient depuis 2021 au groupe Meta. L’application permet à ses utilisateurs de publier des images, des photos, des vidéos, des fichiers et documents, d'échanger des messages, de joindre et de créer des groupes.</p>
+      </div>
+    </section>
+
+    <section class="aside">
+      <div class="rectangle2"></div>
+      <h2>Performance</h2>
+      <div class="explication">
+        <p> <strong> 2020 </strong> <br> <strong> 2,85 </strong> milliards</p>
+        <span class="vertical-line"></span>
+        <p> <strong> 2021 </strong> <br> <strong> 2,9 </strong> milliards</p>
+      </div>
+      <h2>Taux d'évolution d'une année à l'autre</h2>
+      <div class="augmentation"> <h3>+ 1,7%</h3> <i class="fa-solid fa-arrow-trend-up" style="font-size: 60px; color: #85d3ff; display: flex ; align-items: center; text-align: center;"></i></div>
+
+      <div class="doughnut">
+        <canvas id="doughnutfacebook" style="position: relative; height:100%; width:100%">
+        </canvas>
+      </div>
+    </section>
+
+    <footer>
+      <div class="links"><a href="mentions.html">Mention légales</a> <a href="A propos.html">A propos</a></div>
+      <p>©dataviz-2022</p>
+    </footer>
+
+  </div>
+
+  <script>
+    new Chart(document.getElementById("Chart1facebookline").getContext('2d'), {
+            type: 'line',
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: false },
+                    title: {
+                        display: true,
+                        text: 'Évolution du nombre d’utilisateurs mensuels actifs dans le monde au cours des années'
+                    }
+                }, scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'milliards'
+                        }
+                    }
+
+                }
+            },
+            data: {
+                labels: ["2012", "2013", "2014", "2015", "2016", "2018", "2019", "2021"],
+
+                datasets: [{
+                    label: 'Nombre d’utilisateurs mensuels',
+                    data: [1000000000, 1166666666, 1320000000, 1550000000, 1800000000, 2280000000, 2400000000, 2910000000],
+                    fill: false,
+                    borderColor: 'rgb(25, 118, 210)',
+                    backgroundColor: 'rgb(25, 118, 210)',
+                    tension: 0.1
+                }]
+            }
+        });
+
+    // Graphique localisation twitter 
+
+    new Chart(document.getElementById("BarChart1Facebook").getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: ['Inde', 'États-Unis', 'Indonésie', 'Brésil', 'Mexique'],
+                datasets: [
+                    {
+                        label: 'Top 5 des pays qui utilisent le plus le réseau social en 2021',
+                        data: [290, 190, 140, 130, 89],
+                        borderColor: 'rgb(3, 169, 244)',
+                        backgroundColor: [
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(255, 159, 64, 0.2)',
+                            'rgba(255, 205, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgb(153, 102, 255)',
+                            'rgb(255, 99, 132)',
+                            'rgb(255, 159, 64)',
+                            'rgb(255, 205, 86)',
+                            'rgb(75, 192, 192)'
+                        ],
+                        borderRadius: 20
+                    }
+                ]
+            },
+            options: {
+                indexAxis: 'y',
+                elements: {
+                    bar: {
+                        borderWidth: 0.5,
+                    }
+                },
+                responsive: true,
+                plugins: {
+                    legend: { display: false },
+                    title: {
+                        display: true,
+                        text: 'Top 5 des pays qui utilisent le plus le réseau social en 2021'
+                    }
+                }, scales: {
+                    x: {
+                        grid: {
+                            display: false
+                        },
+                        title: {
+                            display: true,
+                            text: 'millions'
+                        }
+                    },
+                    y: {
+                        grid: {
+                            display: false
+                        }
+                    }
+
+                }
+            }
+        });
+
+        new Chart(document.getElementById("doughnutfacebook").getContext('2d'), {
+            type: 'doughnut',
+            data: {
+                datasets: [{
+                    data: [
+                        57, 43, 0, 0, 0, 0
+                    ],
+
+                    backgroundColor: [
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(201, 203, 207, 0.2)',
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(255, 205, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgb(153, 102, 255)',
+                        'rgb(201, 203, 207)',
+                        'rgb(255, 99, 132)',
+                        'rgb(255, 159, 64)',
+                        'rgb(255, 205, 86)',
+                        'rgb(75, 192, 192)'
+                    ],
+                    cutout: '0%', borderRadius: 20
+                }, {
+                    data: [
+                        0, 0, 28, 49, 18, 5
+
+                    ],
+                    backgroundColor: [
+                        '',
+                        '',
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(255, 205, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)'
+                    ],
+                    borderColor: [
+                        '',
+                        '',
+                        'rgb(255, 99, 132)',
+                        'rgb(255, 159, 64)',
+                        'rgb(255, 205, 86)',
+                        'rgb(75, 192, 192)'
+                    ], cutout: '0%', borderRadius: 20
+                }],
+                labels: [
+                    "Homme",
+                    "Femme",
+                    "-25 ans",
+                    "25-34 ans",
+                    "35-54 ans",
+                    "55 ans et +"
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Profil utilisateurs type',
+                    }
+                }
+            }
+        });
+  </script>
+
+</body>
+
+</html>

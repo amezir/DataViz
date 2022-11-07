@@ -1,0 +1,287 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+/* ---------------------HEADER------------------------- */
+
+header img {
+  padding-top: 30px;
+}
+
+header#sidebar h1 {
+  color: white;
+  margin: 0;
+}
+
+header#sidebar p {
+  padding: 15px;
+  font-size: 1.3em;
+}
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+header {
+  height: 87vh;
+  background-color: #12131C;
+  z-index: 999;
+}
+
+.list-sidenav {
+  padding: 0;
+}
+
+.list-sidenav li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+li a:hover {
+  color: #85d3ff;
+  transition: color .2s ease;
+}
+
+/* ---------------------FIN HEADER------------------------- */
+
+/* ---------------------SECTION ANALYSES------------------------- */
+
+.analyses h1 {
+  font-size: 2em;
+  font-weight: 30;
+  margin: 0px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.rectangle1 {
+  width: 70%;
+  height: 70px;
+  background: #f5f5f5;
+  position: absolute;
+  z-index: -5;
+}
+
+.rectangle2 {
+  /* width: 100%; */
+  height: 70px;
+  background: #f5f5f5;
+}
+
+.analyses h2 {
+  font-size: 1.5em;
+  padding-left: 50px;
+  margin-top: 0;
+}
+
+.texte {
+  font-size: 1.5em;
+  text-justify: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-weight: 500;
+}
+
+section {
+  grid-area: sidebar1;
+  grid-area: 1 / 2 / 6 / 5;
+}
+
+/* ---------------------FIN SECTION ANALYSES------------------------- */
+
+.blue {
+  font-size: 2em;
+  color: #85d3ff;
+  font-weight: bold;
+}
+
+.white {
+  font-size: 2em;
+  color: white;
+}
+
+.aside h2 {
+  text-align: center;
+  font-size: 1.3em;
+  margin-top: 30px;
+}
+
+.aside h3 {
+  font-size: 2.5em;
+  font-weight: bold;
+  padding-right: 50px;
+}
+
+.augmentation {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.vertical-line {
+  border-left: 2px solid #000;
+  display: inline-block;
+  height: 80px;
+  margin: 0 20px;
+}
+
+.explication {
+  display: flex;
+  flex-direction: center;
+  justify-content: space-evenly;
+}
+
+section:nth-of-type(2) {
+  grid-area: content;
+  grid-area: 1 / 5 / 6 / 6;
+  border-left: 5px solid #f5f5f5;
+}
+
+.container-grille {
+  height: 100vh;
+  width: 100vw;
+  gap: 1%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+@media screen and (max-width: 1200px) {
+  header {
+    font-size: 0.7em;
+  }
+
+  .analyses h1 {
+    font-size: 2em;
+    font-weight: 30;
+    margin: 0px;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+  }
+
+  .container-grille {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .rectangle1 {
+    width: 100%;
+    height: 70px;
+    background: #f5f5f5;
+    position: absolute;
+    z-index: -5;
+  }
+
+  header h1 {
+    font-size: 3em;
+  }
+
+  header#sidebar p {
+    padding: 15px;
+    font-size: 1.5em;
+  }
+
+  .aside h2 {
+    font-size: 2em;
+  }
+
+  .list-sidenav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .list-sidenav li {
+    margin: 0 10px;
+  }
+
+  main p {
+    min-height: 600px;
+  }
+
+  .vertical-line {
+    height: 140px;
+  }
+
+  section:nth-of-type(2) {
+    border-top: 5px solid #d9d9d9;
+    border-left: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .explication p {
+    font-size: 1.5em;
+  }
+
+  .augmentation {
+    justify-content: center;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .doughnut {
+    height: 50vh;
+    width: 30vw;
+  }
+
+  .links {
+    padding-top: 10px;
+  }
+
+  hr {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  section {
+    padding-left: 25px;
+  }
+
+  header#sidebar .burger {
+    right: -65px;
+  }
+}
+
+.links {
+  display: flex;
+  flex-direction: center;
+  justify-content: space-evenly;
+}
+
+footer {
+  height: 13vh;
+  background-color: #12131C;
+  text-align: center;
+  color: white;
+  padding: 0;
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: #85d3ff;
+  transition: color .2s ease;
+}
