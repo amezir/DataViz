@@ -88,40 +88,6 @@
   </div>
 
   <script>
-    new Chart(document.getElementById("Chart2twitterline").getContext('2d'), {
-      type: 'line',
-      options: {
-        responsive: true,
-        plugins: {
-          legend: { display: false },
-          title: {
-            display: true,
-            text: 'Évolution du nombre d’utilisateurs mensuels actifs dans le monde au cours des années'
-          }
-        }, scales: {
-          x: {
-            title: {
-              display: true
-            }
-          }
-
-        }
-      },
-      data: {
-        labels: ["2012", "2013", "2014", "2015", "2016", "2018", "2019", "2021"],
-
-        datasets: [{
-          label: 'Nombre d’utilisateurs mensuels',
-          data: [50000000, 250000000, 240000000, 300000000, 295000000, 310000000, 310000000, 326000000],
-          fill: false,
-          borderColor: 'rgb(3, 169, 244)',
-          backgroundColor: 'rgb(3, 169, 244)',
-          tension: 0.1
-        }]
-      }
-    });
-
-
     new Chart(document.getElementById("Chart3snapline"), {
       type: 'line',
       options: {
