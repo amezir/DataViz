@@ -1,17 +1,5 @@
 # DataViz
  cooperative project
- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
- 
-DataViz c’est quoi ?
-
-DataViz est une plateforme documentaire créée par un groupe de trois étudiants en MMI.
-Des données y sont représentées sous la forme de visualisation graphique, l’équipe Dataviz vous invite à les découvrir !
-
-La plupart des résultats des études de cas menées autour des réseaux sociaux démontrent une forte croissance de l’utilisation générale de ces derniers, ceci pouvant s’expliquer par un effet de mode mais aussi par un facteur externe comme le Covid19, qui a notamment incité les personnes du monde entier à se réunir autour de plateformes médiatiques pour pouvoir préserver les liens sociaux. Si le développement des solutions digitales est basé essentiellement sur l’aspect relationnel dans un contexte mondial, les réseaux sociaux séduisent également par leur aspect divertissant et engageant, ainsi que pour la diffusion rapide et en temps réel de contenus divers et variés.
-
-Certaines données ont été reprises sur des sites fiables dont le secteur professionnel tourne autour du digital et de manière plus générale autour des médias, d’autres ont été calculées à partir de ces données (ie. Taux d’évolution). Le repartage de ces informations est donné à titre informatif dans le cadre d’un projet étudiant.
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 What is DataViz?
 
